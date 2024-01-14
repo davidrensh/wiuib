@@ -10,12 +10,16 @@ import { ChoiceGroup, IChoiceGroupOption } from '@fluentui/react/lib/ChoiceGroup
 import { Dialog, DialogType, DialogFooter } from '@fluentui/react/lib/Dialog';
 // import { DetailsRow } from '@fluentui/react/lib/DetailsList';
 // import { Selection, SelectionMode, SelectionZone } from '@fluentui/react/lib/Selection';
-import { getTheme, IRawStyle } from '@fluentui/react/lib/Styling';
+import { FontWeights, getTheme, IRawStyle } from '@fluentui/react/lib/Styling';
 import { GroupedList, IGroupHeaderProps, IGroupFooterProps } from '@fluentui/react/lib/GroupedList';
 
 import { Dropdown, DropdownMenuItemType, IDropdownOption, IDropdownStyles } from '@fluentui/react/lib/Dropdown';
-import { DatePicker, DayOfWeek, IDatePickerStrings } from '@fluentui/react/lib/DatePicker';
-import { Card, ICardTokens, ICardSectionStyles, ICardSectionTokens } from '@fluentui/react-cards';
+import {
+  DatePicker,
+  DayOfWeek,
+  defaultDatePickerStrings,
+} from '@fluentui/react';
+// import { Card, ICardTokens, ICardSectionStyles, ICardSectionTokens } from '@fluentui/react-cards';
 // import { TeachingBubble } from '@fluentui/react/lib/TeachingBubble';
 import { SearchBox } from '@fluentui/react/lib/SearchBox';
 import * as React from 'react';
@@ -38,7 +42,6 @@ import {
 // IColumn, ITextStyles, IIconStyles, IIconProps, IStackTokens, 
 import { Label } from '@fluentui/react/lib/Label';
 import { Text } from '@fluentui/react/lib/Text';
-import { TexFontWeightst } from '@fluentui/react/lib/FontWeights';
 const iconClass = mergeStyles({
   fontSize: 16,
   height: 16,
@@ -128,6 +131,7 @@ const setJsonByPath = (obj: any, path: any, value: any): any => {
             break;
           case "isNotWithin":
             x[properties[0]] = { isNotWithin: value };
+            break;
           default:
             break;
         }

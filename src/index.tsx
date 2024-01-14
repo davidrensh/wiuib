@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './App';
-import { mergeStyles } from 'office-ui-fabric-react';
+import { mergeStyles } from '@fluentui/react';
 //import 'react-sortable-tree/style.css'; // This only needs to be imported once in your app
 
-import { initializeIcons } from '@uifabric/icons';
+//import { initializeIcons } from '@fluentui/react/lib/Icon';//'@fluentui/icons';
+import { initializeIcons } from '@fluentui/font-icons-mdl2';
+
 initializeIcons();
 // Inject some global styles
 mergeStyles({

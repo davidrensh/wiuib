@@ -1,41 +1,41 @@
-import Tree from 'react-d3-tree';
+// import Tree from 'react-d3-tree';
 import './custom-tree.css';
-import { Slider } from 'office-ui-fabric-react/lib/Slider';
+import { Slider } from '@fluentui/react/lib/Slider';
 import {
   IContextualMenuProps, MessageBarButton, IButtonProps,
   MessageBar,
   MessageBarType, Label
-} from 'office-ui-fabric-react';
-import { CommandBar, ICommandBarItemProps } from 'office-ui-fabric-react/lib/CommandBar';
-import { TooltipHost, ITooltipHostStyles } from 'office-ui-fabric-react/lib/Tooltip';
-import { useId } from '@uifabric/react-hooks';
-import { Image } from 'office-ui-fabric-react/lib/Image';
-import { Checkbox } from 'office-ui-fabric-react/lib/Checkbox';
-import { ChoiceGroup, IChoiceGroupOption } from 'office-ui-fabric-react/lib/ChoiceGroup';
+} from '@fluentui/react';
+import { CommandBar, ICommandBarItemProps } from '@fluentui/react/lib/CommandBar';
+import { TooltipHost, ITooltipHostStyles } from '@fluentui/react/lib/Tooltip';
+import { useId } from '@fluentui/react-hooks';
+import { Image } from '@fluentui/react/lib/Image';
+import { Checkbox } from '@fluentui/react/lib/Checkbox';
+import { ChoiceGroup, IChoiceGroupOption } from '@fluentui/react/lib/ChoiceGroup';
 
-import { Dialog, DialogType, DialogFooter } from 'office-ui-fabric-react/lib/Dialog';
-import { FontSizes, getTheme, IRawStyle } from 'office-ui-fabric-react/lib/Styling';
+import { Dialog, DialogType, DialogFooter } from '@fluentui/react/lib/Dialog';
+import { FontSizes, getTheme, IRawStyle } from '@fluentui/react/lib/Styling';
 
-import { Dropdown, DropdownMenuItemType, IDropdownOption, IDropdownStyles } from 'office-ui-fabric-react/lib/Dropdown';
-import { DatePicker, DayOfWeek, IDatePickerStrings } from 'office-ui-fabric-react/lib/DatePicker';
-import { Card, ICardTokens, ICardSectionStyles, ICardSectionTokens } from '@uifabric/react-cards';
-import { SearchBox } from 'office-ui-fabric-react/lib/SearchBox';
+import { Dropdown, DropdownMenuItemType, IDropdownOption, IDropdownStyles } from '@fluentui/react/lib/Dropdown';
+import { DatePicker, DayOfWeek, IDatePickerStrings } from '@fluentui/react';
+// import { Card, ICardTokens, ICardSectionStyles, ICardSectionTokens } from '@fluentui/react-card';
+import { SearchBox } from '@fluentui/react/lib/SearchBox';
 import * as React from 'react';
 
-import { DefaultButton, PrimaryButton, CommandBarButton } from 'office-ui-fabric-react/lib/Button';
-import { Panel, PanelType } from 'office-ui-fabric-react/lib/Panel';
-import { Separator } from 'office-ui-fabric-react/lib/Separator';
-import { TextField, ITextFieldStyles } from 'office-ui-fabric-react/lib/TextField';
-import { useConstCallback } from '@uifabric/react-hooks';
-import { Nav, INavStyles, INavLinkGroup, } from 'office-ui-fabric-react/lib/Nav';
-import { FontIcon } from 'office-ui-fabric-react/lib/Icon';
-import { mergeStyles, mergeStyleSets } from 'office-ui-fabric-react/lib/Styling';
-// import { Slider } from 'office-ui-fabric-react/lib/Slider';
-import { useBoolean } from '@uifabric/react-hooks';
+import { DefaultButton, PrimaryButton, CommandBarButton } from '@fluentui/react/lib/Button';
+import { Panel, PanelType } from '@fluentui/react/lib/Panel';
+import { Separator } from '@fluentui/react/lib/Separator';
+import { TextField, ITextFieldStyles } from '@fluentui/react/lib/TextField';
+import { useConstCallback } from '@fluentui/react-hooks';
+import { Nav, INavStyles, INavLinkGroup, } from '@fluentui/react/lib/Nav';
+import { FontIcon } from '@fluentui/react/lib/Icon';
+import { mergeStyles, mergeStyleSets } from '@fluentui/react/lib/Styling';
+// import { Slider } from '@fluentui/react/lib/Slider';
+import { useBoolean } from '@fluentui/react-hooks';
 import {
   Stack, StackItem, Text, Link, FontWeights, DetailsList, SpinButton,
   IColumn, ITextStyles, IIconStyles, IIconProps, IStackTokens
-} from 'office-ui-fabric-react';
+} from '@fluentui/react';
 
 // import { observer } from 'mobx-react-lite';
 import General from './stores/general';
@@ -191,7 +191,7 @@ const TemplateJson = `{
 const textFieldStyles: Partial<ITextFieldStyles> = { root: { minWidth: '600px' } };
 
 export const App: React.FunctionComponent = (() => {
-  const [, updateState] = React.useState();
+  const [, updateState] = React.useState({});
   const forceUpdate = React.useCallback(() => updateState({}), []);
   const CardHeightDefault = '200px';
   const CardWidthDefault = '1024px';
